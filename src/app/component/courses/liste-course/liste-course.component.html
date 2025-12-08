@@ -1,0 +1,56 @@
+
+<div class="flex mt-20 justify-center">
+    <div class="overflow-x-auto">
+      <table class="table">
+      
+        <thead>
+          <tr>
+            <th>Published</th>
+            <th class="hidden md:table-cell">Image</th>
+            <th>Title</th>
+            <th class="hidden md:table-cell">Content</th>
+            <th>Price</th>
+            <th>Published At</th>
+            <th></th>
+
+          </tr>
+        </thead>
+        <tbody>
+            @for (course of coursesData; track i;let i= $index) {
+                <tr>
+                  <th>
+                    <input type="checkbox" [checked]="course.active" class="toggle toggle-md toggle-success" />
+
+                  </th>
+                  <td class="hidden md:table-cell"> 
+                    <img width="150px" class="rounded-box" [src]="course.url" [alt]="course.title">
+                  </td>
+                  <td>{{course.title | titlecase}}</td>
+                  <td class="hidden md:table-cell">{{course.content| lowercase| resume:85}}</td>
+                  <td>
+                <!-- <div class="badge badge-lg badge-outline badge-accent">{{course.price | currency:'EUR'}}</div> -->
+                  <div class="badge badge-lg badge-outline badge-accent">{{course.price | number:'1.3-3'}}MAD</div>
+
+                </td>
+                <td>{{course.publishedAt| date:'dd/MM/yyy'}}</td>
+                <td noWrap="true">
+                <button (click)="requestEditCourse(course)" data-tip="Edit" class="tooltip btn btn-sm me-2 btn-warning">
+                    <app-edit-icons></app-edit-icons>
+                </button>
+                @if(course.id){
+                  <button (click)="requestdeleteCourse(course.id)" data-tip="Delete" class="tooltip btn btn-sm btn-error">
+                    <app-delete-icons></app-delete-icons>
+
+                </button>
+                }
+                
+              </td>
+              </tr>
+            
+        }
+         
+          
+        </tbody>
+      </table>
+    </div>
+</div>

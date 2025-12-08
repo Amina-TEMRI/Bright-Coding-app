@@ -1,0 +1,64 @@
+
+
+<div class="navbar bg-warning text-warning-content">
+  <div class="flex-1">
+    <a class="btn btn-ghost text-xl">Bright Coding</a>
+  </div>
+
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="nav-active" routerLink="/home">Home</a></li>
+      @if (authservice.isAuthenticated()) {
+      <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="nav-active" routerLink="/blog">blog</a></li>
+      <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="nav-active" routerLink="/todos">Todos</a></li>
+      <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="nav-active" routerLink="/users">Users</a></li>
+
+      <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="nav-active" routerLink="/elearning">Elearning </a></li> 
+      <!-- <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="nav-active" routerLink="/counter">Counter</a></li> -->
+      }
+      
+       
+    </ul>
+
+    @if(authservice.isAuthenticated()){
+      <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            [src]="authservice.getUser()?.image" />
+        </div>
+      </div>
+      <ul
+        tabindex="-1"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li>
+          <a class="justify-between">
+            {{authservice.getUser()?.firstName}}{{authservice.getUser()?.lastName}}
+            
+          </a>
+        </li>
+
+<li>
+  <button (click)="authservice.logout()"
+          class="btn btn-sm px-5 py-2 rounded-full 
+                 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500
+                 text-white font-semibold shadow-lg 
+                 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+    Logout
+  </button>
+</li>
+      </ul>
+    </div>
+
+    }
+    @else {
+           <a routerLink="/auth/login">Login</a>
+
+    }
+     
+     </div>
+</div>
+
+ 
+      

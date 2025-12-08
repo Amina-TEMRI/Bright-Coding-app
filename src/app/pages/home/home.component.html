@@ -1,0 +1,117 @@
+<section class="min-h-screen bg-gradient-to-b from-yellow-50 via-white to-yellow-100 flex items-center">
+  <div class="container mx-auto px-6 py-24">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Texte principal -->
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 animate-fade-in">
+          Bright Coding — <span class="text-yellow-500">Apprenez. Construisez. Brillez.</span>
+        </h1>
+        <p class="text-gray-700 text-lg mb-8 animate-fade-in delay-200">
+          Des tutoriels, cours et projets pratiques pour monter en compétences rapidement en développement web. Rejoignez une communauté d'apprenants et commencez votre prochain projet aujourd'hui.
+        </p>
+
+        <div class="flex flex-wrap gap-4 animate-fade-in delay-400">
+          <a (click)="goToBlog()" class="btn btn-ghost border-gray-300 hover:border-yellow-500 hover:text-yellow-500 transition-colors">
+  Lire le blog
+</a>
+
+        </div>
+
+        <!-- Blocs avec icônes -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 animate-fade-in delay-600">
+          <div class="p-6 bg-white shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2 flex items-start gap-3">
+            <img src="https://img.icons8.com/color/48/000000/project.png" class="w-8 h-8 mt-1"/>
+            <div>
+              <h4 class="font-semibold text-lg mb-1 text-yellow-600">Projets réels</h4>
+              <p class="text-gray-600 text-sm">Apprenez en construisant des applications concrètes.</p>
+            </div>
+          </div>
+          <div class="p-6 bg-white shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2 flex items-start gap-3">
+            <img src="https://img.icons8.com/color/48/000000/reading.png" class="w-8 h-8 mt-1"/>
+            <div>
+              <h4 class="font-semibold text-lg mb-1 text-yellow-600">Guides pas-à-pas</h4>
+              <p class="text-gray-600 text-sm">Des tutoriels clairs pour tous les niveaux.</p>
+            </div>
+          </div>
+          <div class="p-6 bg-white shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2 flex items-start gap-3">
+            <img src="https://img.icons8.com/color/48/000000/conference-call.png" class="w-8 h-8 mt-1"/>
+            <div>
+              <h4 class="font-semibold text-lg mb-1 text-yellow-600">Communauté active</h4>
+              <p class="text-gray-600 text-sm">Échangez, rapprochez-vous et progressez ensemble.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte illustration / Démarrez maintenant -->
+      <div class="flex justify-center animate-fade-in delay-800">
+        <div class="w-full max-w-xl shadow-2xl overflow-hidden relative">
+          <!-- Background image -->
+          <div class="absolute inset-0">
+            <img src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp"
+                 alt="wow background" class="w-full h-full object-cover brightness-75" />
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+          </div>
+
+          <!-- Contenu par-dessus -->
+          <div class="relative p-8 flex flex-col items-center text-center text-white">
+  <!-- Fond semi-transparent avec blur -->
+  <div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm rounded-xl"></div>
+
+  <!-- Contenu par-dessus -->
+  <div class="relative z-10 flex flex-col items-center text-center space-y-4 animate-fade-up">
+    <h3 class="text-3xl md:text-4xl font-extrabold mb-3 bg-clip-text text-transparent 
+               bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500 
+               drop-shadow-lg">
+      Démarrez maintenant
+    </h3>
+    <p class="text-sm md:text-base text-white/90">
+       Inscrivez-vous, suivez les cours, likez,et publiez vos propres projets    </p>
+    <a (click)="goToLogin()" 
+   class="btn btn-primary px-8 py-3 rounded-full shadow-xl 
+          bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500 
+          hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+  Se connecter
+</a>
+
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gradient-to-r from-yellow-50 via-white to-yellow-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-gray-900 animate-fade-in">
+      Pourquoi choisir <span class="text-yellow-500 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500">Bright Coding</span> ?
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Carte 1 -->
+     <!-- Contenu à jour -->
+  <div class="p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3 hover:scale-105 bg-gradient-to-br from-white to-yellow-50 text-center animate-fade-in delay-200">
+<img src="https://img.icons8.com/color/64/000000/refresh.png" class="mx-auto mb-4" alt="Contenu à jour">
+    <h4 class="font-semibold mb-3 text-yellow-500 text-xl">Contenu à jour</h4>
+    <p class="text-gray-600 text-sm">Nos cursus suivent les dernières pratiques et outils pour rester à jour.</p>
+  </div>
+
+      <!-- Carte 2 -->
+      <div class="p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3 hover:scale-105 bg-gradient-to-br from-white to-yellow-50 text-center animate-fade-in delay-400">
+        <img src="https://img.icons8.com/color/64/000000/open-book.png" class="mx-auto mb-4" alt="Apprentissage pratique">
+        <h4 class="font-semibold mb-3 text-yellow-500 text-xl">Apprentissage pratique</h4>
+        <p class="text-gray-600 text-sm">Chaque leçon inclut des exercices et projets réels pour appliquer vos compétences.</p>
+      </div>
+
+      <!-- Carte 3 -->
+      <div class="p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3 hover:scale-105 bg-gradient-to-br from-white to-yellow-50 text-center animate-fade-in delay-600">
+        <img src="https://img.icons8.com/color/64/000000/help.png" class="mx-auto mb-4" alt="Support">
+        <h4 class="font-semibold mb-3 text-yellow-500 text-xl">Support & Communauté</h4>
+        <p class="text-gray-600 text-sm">Posez vos questions et obtenez de l'aide de notre communauté active et bienveillante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+

@@ -1,0 +1,58 @@
+<div class="flex justify-center flex-col items-center min-h-screen bg-gradient-to-b from-yellow-50 via-white to-yellow-100">
+
+  @if (errorMessage) {
+    <div class="badge badge-outline mb-6 badge-error gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+      {{errorMessage}}
+    </div>
+  }
+
+  <form (ngSubmit)="submit()" [formGroup]="loginForm" class="p-16 rounded-3xl" style="background-color: oklch(90% 0.15 83.87);">
+      <h1 class="text-3xl font-bold my-4 text-center">Login</h1> <!-- Réduire my-6 à my-4 -->
+
+    <!-- Username -->
+    <div class="form-control w-full max-w-xs">
+      <label class="label">
+        <span class="label-text">Username</span>
+      </label>
+
+      <input formControlName="username" type="text" placeholder="username" class="input input-bordered w-full max-w-xs" />
+
+      @if(loginForm.get('username')?.invalid && loginForm.get('username')?.touched) {
+        <label class="label">
+          @if(loginForm.get('username')?.hasError('required')) {
+            <span class="label-text-alt text-error text-red-500">Username is required</span>
+          }
+        </label>
+      }
+    </div>
+
+    <!-- Password -->
+    <div class="form-control w-full max-w-xs">
+      <label class="label">
+        <span class="label-text">Password</span>
+      </label>
+
+      <input formControlName="password" type="password" placeholder="**********" class="input input-bordered w-full max-w-xs" />
+
+      @if(loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+        <label class="label">
+          @if(loginForm.get('password')?.hasError('required')) {
+            <span class="label-text-alt text-error text-red-500">Password is required!</span>
+          }
+          @if(loginForm.get('password')?.hasError('pattern')) {
+            <span class="label-text-alt text-error text-red-500">Password should be alphanumeric with at least 8 characters!</span>
+          }
+        </label>
+      }
+    </div>
+
+    <!-- Button centré -->
+    <div class="mt-4 flex justify-center w-full">
+      <button class="btn btn-wide btn-outline btn-error mt-5">Login</button>
+    </div>
+
+  </form>
+</div>

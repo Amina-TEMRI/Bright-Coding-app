@@ -1,0 +1,8 @@
+<div class="grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 mt-6">
+    <!--Il faut boucler sur les cartes pour que chaque cours ait sa propre carte. -->
+    @for (course of coursesData; track i; let i = $index) {
+        @if(course.id){
+                 <app-card-course (delete)="requestdeleteCourse(course.id)" [course]="course"></app-card-course>
+        }
+    }
+</div>

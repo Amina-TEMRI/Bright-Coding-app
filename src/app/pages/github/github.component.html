@@ -1,0 +1,24 @@
+<div class="flex my-10 mx-4 justify-between">
+    <h1 class="font-black text-2xl">List of Users </h1>
+    <input (change)="searchUsers()" [(ngModel)]="search" placeholder="Search..."  class="input input-bordered">
+</div>
+
+<button #load class=" btn btn-sm btn-primary my-4">load</button>
+
+@defer (on interaction(load)) {
+<app-list-github [users]="users"></app-list-github>// angular il va chaeger le composant avec lazy loading;//chargement d'une facon differé et il ya plusieur option appliqué sur defer
+
+}
+@placeholder {
+  <div class="flex w-52 flex-col gap-4">
+    <div class="skeleton h-32 w-full"></div>
+    <div class="skeleton h-4 w-28"></div>
+    <div class="skeleton h-4 w-full"></div>
+    <div class="skeleton h-4 w-full"></div>
+  </div>
+}
+
+@loading{
+    loading...
+}
+@error {}

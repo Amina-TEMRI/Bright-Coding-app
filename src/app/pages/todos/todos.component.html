@@ -1,0 +1,83 @@
+@if (notify) {
+    <div class="toast" [ngClass]="['toast-bottom', notification.position]" >
+  <div class="alert" [ngClass]="notification.alertClass">
+    <span>{{notification.message}}</span>
+  </div>
+</div>
+
+}
+
+<div
+  class="hero min-h-screen"
+  style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);"
+>
+  <div class="hero-overlay"></div>
+  <div class="hero-content text-neutral-content text-center">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-5xl font-bold">{{title}}</h1>
+      <p class="mb-5">
+        Your Complete Guide to Effective Angular To-Do Lists.
+      </p>
+      
+      <button (click)="toggleForm()" 
+        [ngStyle]="{
+            'color':showForm ? 'red':'grey',
+            'font-size':edittable ,'20px':'10px'
+        }"
+        [ngClass]="{
+        'btn-primary': showForm && !edittable,
+        'btn-neutral': !showForm,
+        'btn-warning': edittable
+      }"  class="btn">{{changetoggleBtn()}}</button>
+    </div>
+  </div>
+</div>
+
+<div class="flex flex-col gap-4  items-center mt-10">
+@if (showForm) {
+   
+<input (keyup.enter)="submit()" [(ngModel)]="myTodo"  type="text" [placeholder]="defaultTodo" class="input w-full max-w-xs" />
+@if(edittable){
+    <div class="flex gap-4">
+        <button (click)="submit()" class="btn btn-warning btn w-56">Update</button>
+         <button (click)="cancel()"   class="btn btn-neutral ">Cancel</button>
+    </div>
+    
+}
+@else {
+    <button (click)="submit()" class="btn btn-primary btn-wide">Create</button>
+}
+
+    }
+@else {
+    <p>click the show button above</p>
+
+    }
+
+    <ul class="menu bg-base-200 rounded-box w-80">
+    
+    @for (todo of todos; track i; let i = $index; let e=$even ; let o=$odd; let f=$first; let l=$last; let c=$count;) {
+        <li>
+    <!-- <span>{{i}}  - {{e}} - {{o}} - {{f}} - {{l}} - {{c}}- {{todo}}</span> -->
+     <span (dblclick)="deleteTodo(i)">{{todo}}</span>
+    <div class="justify-end">
+        <button (click)="editTodo(todo,i)" class="btn btn-warning btn-sm">Edit</button>
+        @if(!edittable){
+       <button (click)="deleteTodo(i)" class="btn btn-error btn-sm">Delete</button>
+        }
+
+    </div>
+
+</li>
+
+    } 
+    @empty {
+        <p>Not yet!!</p>
+    }
+
+</ul>
+
+
+
+
+</div>

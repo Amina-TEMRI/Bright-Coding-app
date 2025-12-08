@@ -1,0 +1,20 @@
+<div class="card bg-base-100 shadow-xl">
+            <figure class="h-32 overflow-hidden">
+                <img [src]="course.url" [alt]="course.title" class="object-cover w-full h-full" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">{{course.title}}</h2>
+                <p>{{course.content}}</p>
+                <div class="card-actions justify-end">
+                    <button data-tip="Edit" class="tooltip btn btn-sm  btn-warning">
+                        <app-edit-icons class="w-4 h-4"></app-edit-icons>
+                    </button>
+                    @if(course.id){
+                        <button (click)="requestdeleteCourse(course.id)"  data-tip="Delete" class="tooltip btn btn-sm btn-error">
+                        <app-delete-icons class="w-4 h-4"></app-delete-icons>
+                    </button>
+                }
+                    
+                </div>
+            </div>
+        </div>
