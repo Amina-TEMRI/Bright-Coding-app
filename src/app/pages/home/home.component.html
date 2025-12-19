@@ -1,82 +1,92 @@
+<!-- HERO SECTION -->
 <section class="min-h-screen bg-gradient-to-b from-yellow-50 via-white to-yellow-100 flex items-center">
   <div class="container mx-auto px-6 py-24">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <!-- Main text -->
+
+      <!-- LEFT CONTENT -->
       <div>
         <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 animate-fade-in">
-          BrightLearn — <span class="text-yellow-500">Learn. Manage. Progress</span>
+          Dev Workshop — <span class="text-yellow-500">Learn by Building</span>
         </h1>
+
         <p class="text-gray-800 text-lg mb-8 animate-fade-in delay-200">
-          A complete platform to enhance your web development skills.<br>
-          Organize your projects, track your tasks, and manage your content effortlessly.<br>
-          Create, publish, and interact with courses, blogs, and practical projects all in one place.
+          Dev Workshop is a hands-on development lab where every concept I learn is applied in real features.<br>
+          Authentication, blogs, Angular signals, CRUD operations, guards, routing, and state management are
+          implemented step by step in a single evolving project.
         </p>
-      
+
         <div class="flex flex-wrap gap-4 animate-fade-in delay-400">
-  <a (click)="goToBlog()" 
-     class="btn px-6 py-3 rounded-full shadow-lg bg-yellow-500 text-white hover:bg-yellow-600 transition-colors">
-    Explore now →
-  </a>
-</div>
+          <a (click)="goToBlog()"
+             class="btn px-6 py-3 rounded-full shadow-lg bg-yellow-500 text-white hover:bg-yellow-600 transition-colors">
+            Explore the Workshop →
+          </a>
+        </div>
 
-
-
-        <!-- Icon blocks -->
+        <!-- FEATURES -->
         <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 animate-fade-in delay-600">
+
           <div class="p-6 bg-white shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2 flex items-start gap-3">
             <img src="https://img.icons8.com/color/48/000000/project.png" class="w-8 h-8 mt-1"/>
             <div>
-              <h4 class="font-semibold text-lg mb-1 text-yellow-600">Real Projects</h4>
-              <p class="text-gray-600 text-sm">Create and manage your courses, blog posts, and tasks to develop your skills practically.</p>
+              <h4 class="font-semibold text-lg mb-1 text-yellow-600">Real Features</h4>
+              <p class="text-gray-600 text-sm">
+                Every Angular concept is implemented through real use cases like authentication and dashboards.
+              </p>
             </div>
           </div>
+
           <div class="p-6 bg-white shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2 flex items-start gap-3">
             <img src="https://img.icons8.com/color/48/000000/reading.png" class="w-8 h-8 mt-1"/>
             <div>
-              <h4 class="font-semibold text-lg mb-1 text-yellow-600">Step-by-Step Guides</h4>
-              <p class="text-gray-600 text-sm">Build and follow your real projects to progress quickly.</p>
+              <h4 class="font-semibold text-lg mb-1 text-yellow-600">Learn by Doing</h4>
+              <p class="text-gray-600 text-sm">
+                No theory-only learning — every concept is tested and practiced inside the application.
+              </p>
             </div>
           </div>
+
           <div class="p-6 bg-white shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2 flex items-start gap-3">
             <img src="https://img.icons8.com/color/48/000000/conference-call.png" class="w-8 h-8 mt-1"/>
             <div>
-              <h4 class="font-semibold text-lg mb-1 text-yellow-600">Active Community</h4>
-              <p class="text-gray-600 text-sm">Exchange ideas, connect, and progress together.</p>
+              <h4 class="font-semibold text-lg mb-1 text-yellow-600">Progressive Project</h4>
+              <p class="text-gray-600 text-sm">
+                The application evolves continuously as new Angular concepts are discovered and applied.
+              </p>
             </div>
           </div>
+
         </div>
       </div>
 
-      <!-- Illustration Card / Get Started -->
+      <!-- RIGHT CARD -->
       <div class="flex justify-center animate-fade-in delay-800">
-        <div class="w-full max-w-lg shadow-2xl overflow-hidden relative">
+        <div class="w-full max-w-lg shadow-2xl overflow-hidden relative rounded-xl">
 
-          <!-- Background image -->
           <div class="absolute inset-0">
             <img src="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp"
-                 alt="wow background" 
-                 class="w-full h-[500px] md:h-[600px] lg:h-[650px] object-cover brightness-75" />
-            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                 alt="background"
+                 class="w-full h-[550px] object-cover brightness-75"/>
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
           </div>
 
-          <!-- Content on top -->
           <div class="relative p-8 flex flex-col items-center text-center text-white">
             <div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm rounded-xl"></div>
 
-            <div class="relative z-10 flex flex-col items-center text-center space-y-4 animate-fade-up">
-              <h3 class="text-3xl md:text-4xl font-extrabold mb-3 bg-clip-text text-transparent 
-                         bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500 
-                         drop-shadow-lg">
-                Get Started
+            <div class="relative z-10 space-y-4">
+              <h3 class="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent 
+                         bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500">
+                Start Practicing
               </h3>
+
               <p class="text-sm md:text-base text-white/90">
-                 Sign up, follow courses, like, and publish your own projects
+                Explore implemented concepts, test features, and follow the evolution of the project.
               </p>
-              <a (click)="goToLogin()" 
-                 class="btn btn-primary px-8 py-3 rounded-full shadow-xl 
-                        bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500 
-                        hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-               Login
+
+              <a (click)="goToLogin()"
+                 class="btn px-8 py-3 rounded-full shadow-xl 
+                        bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500
+                        hover:scale-105 transition-transform duration-300">
+                Access Workshop
               </a>
             </div>
           </div>
@@ -88,33 +98,40 @@
   </div>
 </section>
 
+<!-- WHY DEV WORKSHOP -->
 <section class="py-20 bg-gradient-to-r from-yellow-50 via-white to-yellow-50">
   <div class="container mx-auto px-6">
+
     <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-gray-900 animate-fade-in">
-      Why choose <span class="text-yellow-500 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500">Bright Coding</span>?
+      Why choose <span class="text-yellow-500">Dev Workshop</span>?
     </h2>
 
     <div class="grid md:grid-cols-3 gap-10">
-      <!-- Card 1 -->
+
       <div class="p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3 hover:scale-105 bg-gradient-to-br from-white to-yellow-50 text-center animate-fade-in delay-200">
-        <img src="https://img.icons8.com/color/64/000000/refresh.png" class="mx-auto mb-4" alt="Up-to-date content">
-        <h4 class="font-semibold mb-3 text-yellow-500 text-xl">Up-to-date Content</h4>
-        <p class="text-gray-600 text-sm">Our courses follow the latest practices and tools to stay current.</p>
+        <img src="https://img.icons8.com/color/64/000000/refresh.png" class="mx-auto mb-4"/>
+        <h4 class="font-semibold mb-3 text-yellow-500 text-xl">Concept-Based Learning</h4>
+        <p class="text-gray-600 text-sm">
+          Each feature exists to practice a specific Angular concept in a realistic scenario.
+        </p>
       </div>
 
-      <!-- Card 2 -->
       <div class="p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3 hover:scale-105 bg-gradient-to-br from-white to-yellow-50 text-center animate-fade-in delay-400">
-        <img src="https://img.icons8.com/color/64/000000/open-book.png" class="mx-auto mb-4" alt="Practical learning">
-        <h4 class="font-semibold mb-3 text-yellow-500 text-xl">Practical Learning</h4>
-        <p class="text-gray-600 text-sm">Each lesson includes exercises and real projects to apply your skills.</p>
+        <img src="https://img.icons8.com/color/64/000000/open-book.png" class="mx-auto mb-4"/>
+        <h4 class="font-semibold mb-3 text-yellow-500 text-xl">Hands-on Practice</h4>
+        <p class="text-gray-600 text-sm">
+          Learn by building real components, services, guards, and APIs.
+        </p>
       </div>
 
-      <!-- Card 3 -->
       <div class="p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3 hover:scale-105 bg-gradient-to-br from-white to-yellow-50 text-center animate-fade-in delay-600">
-        <img src="https://img.icons8.com/color/64/000000/help.png" class="mx-auto mb-4" alt="Support">
-        <h4 class="font-semibold mb-3 text-yellow-500 text-xl">Support & Community</h4>
-        <p class="text-gray-600 text-sm">Ask questions and get help from our active and supportive community.</p>
+        <img src="https://img.icons8.com/color/64/000000/help.png" class="mx-auto mb-4"/>
+        <h4 class="font-semibold mb-3 text-yellow-500 text-xl">Evolving Architecture</h4>
+        <p class="text-gray-600 text-sm">
+          The project architecture improves continuously as new concepts are introduced.
+        </p>
       </div>
+
     </div>
   </div>
 </section>
